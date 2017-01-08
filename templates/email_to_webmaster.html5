@@ -1,0 +1,55 @@
+<?php $Labels = $GLOBALS['TARIFRECHNER']['labels']; ?>
+Hallo Webmaster
+
+Ein neuer Auftrag ist eingetroffen:
+
+
+        <?= $Labels['ctrlRollgeldNetto'] ?>: EUR <?= $this->fields['ctrlRollgeldNetto'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlRollgeldMwst'] ?>: EUR <?= $this->fields['ctrlRollgeldMwst'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlRollgeldBrutto'] ?>: EUR <?= $this->fields['ctrlRollgeldBrutto'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlGewicht'] ?>: <?= $this->fields['ctrlGewicht'] ?> kg<?= chr(10) ?>
+
+
+        <?= $Labels['ctrlFirmName'] ?>: <?= $this->fields['ctrlFirmName'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlCustomerName'] ?>: <?= $this->fields['ctrlCustomerName'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlCustomerStreet'] ?>: <?= $this->fields['ctrlCustomerStreet'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlCustomerCity'] ?>: <?= $this->fields['ctrlCustomerCity'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlCustomerPhone'] ?>: <?= $this->fields['ctrlCustomerPhone'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlCustomerEmail'] ?>: <?= $this->fields['ctrlCustomerEmail'] ?><?= chr(10) ?>
+
+        --------------------------------
+
+        Abholadresse:
+        <?php if($this->fields['ctrlPickupAddressStreet'] != ''): ?>
+        <?= $Labels['ctrlPickupAddressName'] ?>: <?= $this->fields['ctrlPickupAddressName'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlPickupAddressStreet'] ?>: <?= $this->fields['ctrlPickupAddressStreet'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlPickupAddressContact'] ?>: <?= $this->fields['ctrlPickupAddressContact'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlPickupAdressPhone'] ?>: <?= $this->fields['ctrlPickupAdressPhone'] ?><?= chr(10) ?>
+        <?php else: ?>
+        <?= $this->fields['ctrlPickupAddress'] ?>
+        <?php endif; ?>
+
+        --------------------------------
+
+        Lieferadresse:
+        <?php if($this->fields['ctrlDeliveryAddressName'] != ''): ?>
+        <?= $Labels['ctrlDeliveryAddressName'] ?>: <?= $this->fields['ctrlDeliveryAddressName'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlDeliveryAddressStreet'] ?>: <?= $this->fields['ctrlDeliveryAddressStreet'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlDeliveryAddressContact'] ?>: <?= $this->fields['ctrlDeliveryAddressContact'] ?><?= chr(10) ?>
+        <?= $Labels['ctrlDeliveryAddressPhone'] ?>: <?= $this->fields['ctrlDeliveryAddressPhone'] ?><?= chr(10) ?>
+        <?php else: ?>
+        <?= $this->fields['ctrlDeliveryAddress'] ?>
+        <?php endif; ?>
+
+        --------------------------------
+
+        <?= $Labels['ctrlPickupDate'] ?>: <?= $this->fields['ctrlPickupDate'] ?><?= chr(10) ?>
+
+        <?php if($this->fields['ctrlMessage'] != ''): ?><?= $Labels['ctrlMessage'] ?>:<?= chr(10) ?><?= $this->fields['ctrlMessage'] ?><?= chr(10) ?><?php endif; ?>
+
+        --------------------------------
+
+
+        Freundliche Grüße
+
+        xxxx
